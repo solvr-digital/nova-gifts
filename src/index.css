@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: #060606;
+    --color-bg-surface: #0D0D0C;
+    --color-bg-card: #111110;
+    --color-bg-elevated: #161615;
+    --color-accent-gold: #C5A059;
+    --color-accent-light: #DFC287;
+    --color-accent-dark: #937439;
+    --color-text-cream: #F7F4EE;
+    --color-text-muted: #A39E93;
+    --color-border-subtle: rgba(255, 255, 255, 0.07);
+    --color-border-gold: rgba(197, 160, 89, 0.3);
+  }
+
+  html {
+    background-color: #060606;
+    color: #F7F4EE;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #060606;
+    color: #F7F4EE;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #060606;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #201E1A;
+    border-radius: 9999px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C5A059;
+  }
+}
+
+/* Subtle Cinematic Film Grain Noise Overlay (Pure SVG data URI) */
+.film-grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.038;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+@layer utilities {
+  /* Metallic Gold Foil Gradients */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FBF4E6 0%, #DFC287 35%, #C5A059 70%, #9B7836 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-cream-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EDE7DA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-gold-metallic {
+    background: linear-gradient(135deg, #E6CB93 0%, #C5A059 45%, #B89248 70%, #937233 100%);
+  }
+
+  .bg-gold-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(197, 160, 89, 0.15) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Hairline Borders */
+  .border-luxury-hairline {
+    border-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .border-gold-hairline {
+    border-color: rgba(197, 160, 89, 0.28);
+  }
+
+  /* Glassmorphism */
+  .bg-glass-luxury {
+    background: rgba(10, 10, 10, 0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .bg-glass-card {
+    background: rgba(17, 17, 16, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  /* Subtle ambient glow */
+  .shadow-gold-subtle {
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.12);
+  }
+
+  .shadow-gold-glow {
+    box-shadow: 0 0 35px rgba(197, 160, 89, 0.22);
+  }
+
+  /* Reveal transition helper */
+  .transition-luxury {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
