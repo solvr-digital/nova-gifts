@@ -2,10 +2,6 @@
 
 A premium and modern gift shop website designed to make gifting more beautiful, personal and memorable.
 
-## 🌐 Live Demo
-
-[Visit Nova Gifts](YOUR-LIVE-LINK)
-
 ## ✨ Features
 
 - Premium modern UI/UX
