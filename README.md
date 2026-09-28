@@ -2,6 +2,7 @@
 
 A premium and modern gift shop website designed to make gifting more beautiful, personal and memorable.
 
+# LIVE LINK - https://nova-gifts.vercel.app/
 ## ✨ Features
 
 - Premium modern UI/UX
